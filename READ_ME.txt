@@ -7,6 +7,6 @@ Kings Cross:
 This script takes information from a Firebase server and then pushes the data to the spreadsheet.
 
 Progress 03:
-A custom spreadsheet function that takes a current progress phase and returns a percentage from the corresponding information in the variable sheet.
+A custom spreadsheet function that takes a current progress phase and returns a percentage from the corresponding information in the variable sheet. 
 
  
