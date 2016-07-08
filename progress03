@@ -1,0 +1,31 @@
+/*
+ * Progress 03
+ * 
+ * A custom spreadsheet function that takes a current progress phase and returns a percentage 
+ * from the corresponding information in the variable sheet.
+ */
+
+function progress3(a){
+  
+  // default output for when percentage cannot be found
+  var output = "Error";
+  
+  // variable sheet and data location
+  var varSheet = SpreadsheetApp.getActive().getSheetByName("Variables");
+  var progress = 3;
+  var percent = 4;
+  var progressData = varSheet.getRange(1, progress, varSheet.getLastRow(), 1).getValues();
+  var percentData = varSheet.getRange(1, percent, varSheet.getLastRow(), 1).getValues();
+  
+  // find corresponding percentage
+  for(var dat in progressData){
+    if(progressData[dat][0] == a){
+      
+      output = percentData[dat][0];
+      
+    }
+  }
+  
+  return output;
+}
+
